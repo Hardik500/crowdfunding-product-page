@@ -1,0 +1,29 @@
+.nav-menu-container {
+    padding: 20px 25px 45px 25px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.75) 50%, rgba(255,255,255,0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu-items {
+    border-radius: 8px;
+    max-height: 0;
+    margin: -10px 25px 30px 25px;
+    padding: 15px 15px;
+    background: transparent;
+    transition: all 0.25s ease-out;
+    overflow: hidden;
+    
+    > div {
+        font-weight: 500;
+        padding: 17.5px 5px;
+    }
+}
+
+.active {
+    background: white;
+    max-height: 500px;
+    transition: all 0.35s ease-in;
+}
