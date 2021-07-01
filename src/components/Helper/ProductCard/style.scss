@@ -1,0 +1,12 @@
+@import "../../../assets/scss/variables.scss";
+
+.product-card-container {
+    border: 1px solid #DDDDDD;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.product-card-disabled {
+    opacity: 0.5;
+}

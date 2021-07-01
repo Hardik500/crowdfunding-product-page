@@ -1,0 +1,14 @@
+@import "../../../assets/scss/variables.scss";
+
+.progress-bar-border {
+    background: $light-grey;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 20%;
+    border: none;
+    border-radius: 20px;
+    background-color: $primary;
+}

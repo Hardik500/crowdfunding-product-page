@@ -15,13 +15,14 @@ const variantsMapping = {
     body2: "p",
 };
 
-const Typography = ({ variant, color, children, ...props }) => {
+const Typography = ({ variant, color, fontWeight, children, ...props }) => {
     const Component = variant ? variantsMapping[variant] : "p";
 
     return (
         <Component
             className={cn({
                 [`typography--variant-${variant}`]: variant,
+                [`typography--fontWeight-${fontWeight}`]: fontWeight,
                 [`typography--color-${color}`]: color,
             })}
             {...props}

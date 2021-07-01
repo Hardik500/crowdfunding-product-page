@@ -1,0 +1,13 @@
+@import "../../../assets/scss/variables.scss";
+
+.button-primary {
+    border: none;
+    background: $primary;
+    padding: 20px 30px;
+    border-radius: 50px;
+    color: $white;
+}
+
+.button-disabled {
+    background: $grey;
+}
