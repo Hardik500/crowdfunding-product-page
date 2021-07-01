@@ -6,4 +6,8 @@
     border-radius: 8px;
     padding: 30px 20px;
     border: 1px solid $light-grey;
+
+    @media (min-width: 1440px) {
+        padding: 30px 50px;
+    }
 }

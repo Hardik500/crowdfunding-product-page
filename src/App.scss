@@ -3,4 +3,16 @@
     background-size: cover;
     height: 275px;
     width: auto;
+
+    @media (min-width: 1440px){
+        background: url('./assets/images/image-hero-desktop.jpg') no-repeat center center; 
+        height: 400px;
+    }
+}
+
+.container {
+    @media (min-width: 1440px){
+        margin: 0 auto;
+        max-width: 1000px;
+    }
 }

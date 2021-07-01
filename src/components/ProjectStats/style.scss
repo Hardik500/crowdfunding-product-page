@@ -7,4 +7,15 @@
 .hr-seperator {
     width: 30%;
     border: 1px solid $grey;
+
+    @media (min-width: 1440px){
+        height: 200%;
+    }
+}
+
+.project-scores-container {
+    @media (min-width: 1440px){
+        display: flex;
+        justify-content: space-between;
+    }
 }

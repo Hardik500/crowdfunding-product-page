@@ -46,6 +46,11 @@
     font-size: 0.875rem;
     font-weight: 500;
     margin: 0;
+    line-height: 25px;
+
+    @media (min-width: 1440px) {
+        line-height: 30px;
+    }
 }
 
 .typography--variant-body1 {
@@ -56,6 +61,12 @@
 .typography--variant-body1 {
     font-size: 0.875rem;
     margin: 0;
+}
+
+.typography--variant-body2 {
+    @media (min-width: 1440px) {
+        line-height: 30px;
+    }
 }
 
 .typography--color-primary {

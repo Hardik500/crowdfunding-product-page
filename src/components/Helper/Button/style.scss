@@ -3,9 +3,14 @@
 .button-primary {
     border: none;
     background: $primary;
+    color: $white;
+    cursor: pointer;
     padding: 20px 30px;
     border-radius: 50px;
-    color: $white;
+
+    &:hover {
+        background: $secondary;
+    }
 }
 
 .button-disabled {

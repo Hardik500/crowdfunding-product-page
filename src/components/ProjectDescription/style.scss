@@ -1,3 +1,5 @@
+@import "../../assets/scss/variables.scss";
+
 .product-description-logo {
     text-align: center;
     position: relative;
@@ -10,4 +12,58 @@
 
 .project-description-body-actions {
     justify-content: space-between;
+}
+
+@media (min-width: 1440px) {
+    .project-description-container {
+        margin-top: -10rem;
+        text-align: center;
+    }
+
+    .project-description-body-container {
+        margin-top: 30px;
+    }
+
+    .thank-you-modal {
+        height: 35vh;
+        padding: 30px 40px;
+    }
+}
+
+.bookmark-menu {
+    cursor: pointer;
+
+    @media (min-width: 1440px){
+        display: flex;
+        align-items: center;
+        background: #F4F4F4;
+        border-radius: 50px;
+        max-height: 60px;
+        padding: 0 20px 0 0;
+        color: $dark-grey;
+
+        > svg {
+            margin-right: 10px;
+        }
+
+        > svg > g {
+            > circle {
+                fill: #707070;
+            }
+        }
+    }
+}
+
+.bookmark-menu-active {
+    background: rgba(157, 250, 227, 0.2);
+
+    > svg > g {
+        > circle {
+            fill: $secondary;
+        }
+
+        > path {
+            fill: $white;
+        }
+    }
 }

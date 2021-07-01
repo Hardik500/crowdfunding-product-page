@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (min-width: 1440px){
+        background: linear-gradient(180deg, rgba(0,0,0,0.50) 25%, rgba(255,255,255,0) 100%);
+    }
 }
 
 .nav-menu-items {
@@ -19,6 +23,7 @@
     overflow: hidden;
     position: relative;
     z-index: 10000;
+    cursor: pointer;
     
     > div {
         font-weight: 500;
@@ -31,4 +36,17 @@
     background: $white;
     max-height: 500px;
     transition: all 0.35s ease-in;
+}
+
+@media (min-width: 1440px){
+    .nav-menu-items {
+        display: flex;
+        overflow: visible;
+        color: $white;
+        z-index: 0;
+    }
+
+    .nav-menu-item {
+        margin: 0 20px;
+    }
 }
