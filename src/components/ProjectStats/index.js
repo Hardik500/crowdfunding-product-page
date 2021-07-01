@@ -9,11 +9,11 @@ export default function ProjectStats() {
         <BaseLayout>
             <div className="project-stats-container">
                 <StatsComponent heading="$89,914" subheading="of $100,000 backed" direction="vertical"/>
-                <div className="flex flex-center hr-container">
+                <div className="flex justify-center hr-container">
                     <div className="hr-seperator"/>
                 </div>
                 <StatsComponent heading="5,007" subheading="total backers" direction="vertical"/>
-                <div className="flex flex-center hr-container">
+                <div className="flex justify-center hr-container">
                     <div className="hr-seperator"/>
                 </div>
                 <StatsComponent heading="56" subheading="days left" direction="vertical"/>

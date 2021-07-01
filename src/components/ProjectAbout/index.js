@@ -2,6 +2,29 @@ import BaseLayout from '../Layout/BaseLayout';
 import Typography from '../Helper/Typography'
 import ProductCard from '../Helper/ProductCard';
 
+const productCardList = [
+    {
+        "heading": "Bamboo Stand",
+        "body": "You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.",
+        "pledgeAmount": 25,
+        "quantity": 101
+    },
+    {
+        "heading": "Black Edition Stand",
+        "body": "You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
+        "pledgeAmount": 75,
+        "quantity": 64
+    },
+    {
+        "heading": "Mahogany Special Edition",
+        "body": "You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
+        "pledgeAmount": 200,
+        "quantity": 0,
+        "disabled": true,
+        "btnTitle": "Out of Stock"
+    }
+]
+
 export default function ProjectAbout(){
     return (
         <BaseLayout>
@@ -14,30 +37,20 @@ export default function ProjectAbout(){
                     Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.
                 </Typography>
 
-                <ProductCard 
-                    heading="Bamboo Stand" 
-                    subheading="Pledge $25 or more" 
-                    body="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list." 
-                    quantity={101}
-                />
-
-                <ProductCard 
-                    heading="Black Edition Stand" 
-                    subheading="Pledge $75 or more" 
-                    body="You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
-                    member list. Shipping is included." 
-                    quantity={64}
-                />
-
-                <ProductCard 
-                    heading="Mahogany Special Edition" 
-                    subheading="Pledge $200 or more" 
-                    body="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
-                    to our Backer member list. Shipping is included." 
-                    quantity={0}
-                    disabled={true}
-                    btnTitle="Out of Stock"
-                />
+                {
+                    productCardList.map((productItem, index) => 
+                        <ProductCard 
+                            heading={productItem.heading}
+                            key={index}
+                            index={productItem.heading}
+                            body={productItem.body}
+                            pledgeAmount={productItem.pledgeAmount}
+                            quantity={productItem.quantity}
+                            disabled={productItem.disabled}
+                            btnTitle={productItem.btnTitle}
+                        />
+                    )
+                }
             </div>
         </BaseLayout>
     )
