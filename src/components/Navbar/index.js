@@ -10,7 +10,7 @@ export default function Navbar(){
     const [ menuActive, toggleMenu ] = useState(false);
 
     return (
-        <div className="container">
+        <>
             <div className="nav-menu-container">
                 <LogoComponent/>
                 {
@@ -23,6 +23,6 @@ export default function Navbar(){
                 <div className="nav-menu-item">Discover</div>
                 <div className="nav-menu-item">Get Started</div>
             </div>
-        </div>
+        </>
     )
 }

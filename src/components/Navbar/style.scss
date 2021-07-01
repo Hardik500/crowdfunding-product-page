@@ -1,3 +1,5 @@
+@import "../../assets/scss/variables.scss";
+
 .nav-menu-container {
     padding: 20px 25px 45px 25px;
     background: rgb(0,0,0);
@@ -15,6 +17,8 @@
     background: transparent;
     transition: all 0.25s ease-out;
     overflow: hidden;
+    position: relative;
+    z-index: 10000;
     
     > div {
         font-weight: 500;
@@ -23,7 +27,8 @@
 }
 
 .active {
-    background: white;
+    box-shadow: 0px -10px 20px 50px rgba(0,0,0,0.35);
+    background: $white;
     max-height: 500px;
     transition: all 0.35s ease-in;
 }
