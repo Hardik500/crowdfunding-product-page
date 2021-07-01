@@ -9,12 +9,19 @@ body {
   height: 100%;
 }
 
+.ReactModal__Body--open {
+  overflow-y: hidden;
+}
+
 .flex {
   display: flex;
 }
 
-.flex-center {
+.justify-center {
   justify-content: center;
+}
+
+.align-center {
   align-items: center;
 }
 
