@@ -1,0 +1,9 @@
+@import "../../../assets/scss/variables.scss";
+
+.base-layout-container {
+    margin: 0px 25px 40px 25px;
+    background: $white;
+    border-radius: 8px;
+    padding: 30px 20px;
+    border: 1px solid $light-grey;
+}
