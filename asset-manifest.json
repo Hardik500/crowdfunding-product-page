@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/crowdfunding-product-page/static/css/main.b6a0f508.chunk.css",
+    "main.js": "/crowdfunding-product-page/static/js/main.4f330846.chunk.js",
+    "main.js.map": "/crowdfunding-product-page/static/js/main.4f330846.chunk.js.map",
+    "runtime-main.js": "/crowdfunding-product-page/static/js/runtime-main.7789fd4d.js",
+    "runtime-main.js.map": "/crowdfunding-product-page/static/js/runtime-main.7789fd4d.js.map",
+    "static/js/2.a5008689.chunk.js": "/crowdfunding-product-page/static/js/2.a5008689.chunk.js",
+    "static/js/2.a5008689.chunk.js.map": "/crowdfunding-product-page/static/js/2.a5008689.chunk.js.map",
+    "static/js/3.0dcf2406.chunk.js": "/crowdfunding-product-page/static/js/3.0dcf2406.chunk.js",
+    "static/js/3.0dcf2406.chunk.js.map": "/crowdfunding-product-page/static/js/3.0dcf2406.chunk.js.map",
+    "index.html": "/crowdfunding-product-page/index.html",
+    "static/css/main.b6a0f508.chunk.css.map": "/crowdfunding-product-page/static/css/main.b6a0f508.chunk.css.map",
+    "static/js/2.a5008689.chunk.js.LICENSE.txt": "/crowdfunding-product-page/static/js/2.a5008689.chunk.js.LICENSE.txt",
+    "static/media/icon-bookmark.7777f8ec.svg": "/crowdfunding-product-page/static/media/icon-bookmark.7777f8ec.svg",
+    "static/media/icon-check.bdee5269.svg": "/crowdfunding-product-page/static/media/icon-check.bdee5269.svg",
+    "static/media/icon-close-menu.32169d31.svg": "/crowdfunding-product-page/static/media/icon-close-menu.32169d31.svg",
+    "static/media/icon-close-modal.732388df.svg": "/crowdfunding-product-page/static/media/icon-close-modal.732388df.svg",
+    "static/media/icon-hamburger.f8a9f0cf.svg": "/crowdfunding-product-page/static/media/icon-hamburger.f8a9f0cf.svg",
+    "static/media/App.scss": "/crowdfunding-product-page/static/media/image-hero-mobile.d4f477d4.jpg",
+    "static/media/logo-mastercraft.dca2a831.svg": "/crowdfunding-product-page/static/media/logo-mastercraft.dca2a831.svg",
+    "static/media/logo.e6f12bc6.svg": "/crowdfunding-product-page/static/media/logo.e6f12bc6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7789fd4d.js",
+    "static/js/2.a5008689.chunk.js",
+    "static/css/main.b6a0f508.chunk.css",
+    "static/js/main.4f330846.chunk.js"
+  ]
+}
