@@ -26,7 +26,7 @@ const baseStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         maxHeight: '80vh',
-        maxWidth: '80vw',
+        maxWidth: '50vw',
         overflowY: 'auto',
         transform: 'translate(-50%, -50%)',
         border: 'none',
@@ -81,6 +81,8 @@ export default function ProjectDescription() {
         content: {
             ...baseStyles.content,
             maxHeight: isDesktopOrLaptop ? '75vh' : '80vh',
+            maxWidth: isDesktopOrLaptop ? '50vw' : '80vw',
+            borderRadius: '10px'
         },
     }
 
@@ -89,7 +91,8 @@ export default function ProjectDescription() {
         content: {
             ...supportModalStyles.content,
             maxWidth: isDesktopOrLaptop ? '35vw' : '80vw',
-            display: 'flex'
+            display: 'flex',
+            borderRadius: '15px'
         },
     };
 
@@ -100,15 +103,15 @@ export default function ProjectDescription() {
             </div>
             <BaseLayout>
                 <div className="project-description-body-container">
-                    <Typography variant="h4" fontWeight={700}>Mastercraft Bamboo Monitor Riser</Typography>
+                    <Typography variant="h4" fontWeight={700} style={{textAlign: 'center'}}>Mastercraft Bamboo Monitor Riser</Typography>
 
-                    <Typography variant="body2">A beautiful handcrafted monitor stand to reduce neck and eye strain.</Typography>
+                    <Typography variant="body2" style={{textAlign: 'center'}}>A beautiful handcrafted monitor stand to reduce neck and eye strain.</Typography>
                 </div>
                 <br />
                 <div className="flex project-description-body-actions">
                     <Button title="Back this project" style={{ width: isDesktopOrLaptop ? '25%' : '75%', padding: 0 }} onClick={() => toggleSupportModal(true)} />
                     <div className={`bookmark-menu ${bookmarked && 'bookmark-menu-active'}`} onClick={() => toggleBookmark(!bookmarked)}>
-                        <BookmarkIcon/>
+                        <BookmarkIcon />
                         {isDesktopOrLaptop && <Typography variant="h6" fontWeight={700} color={bookmarked ? 'primary' : 'grey'}>{bookmarked ? 'Bookmarked' : 'Bookmark'}</Typography>}
                     </div>
                 </div>
@@ -120,33 +123,35 @@ export default function ProjectDescription() {
                 onRequestClose={() => toggleSupportModal(false)}
                 contentLabel="Support Modal"
             >
-                <div className="flex align-center" style={{ justifyContent: 'space-between' }}>
-                    <Typography variant="h6" fontWeight={700}>Back this project</Typography>
+                <div style={{padding: isDesktopOrLaptop && '10px 20px'}}>
+                    <div className="flex align-center" style={{ justifyContent: 'space-between' }}>
+                        <Typography variant="h6" fontWeight={700}>Back this project</Typography>
 
-                    <button onClick={() => { console.log("clicked"); toggleSupportModal(false) }} style={{ border: 'none', background: 'white', padding: '5px 10px' }}>
-                        <ModalClose />
-                    </button>
+                        <button onClick={() => toggleSupportModal(false)} style={{ border: 'none', background: 'white', padding: '5px 10px', cursor: 'pointer' }}>
+                            <ModalClose />
+                        </button>
+                    </div>
+                    <br />
+                    <Typography variant="subheading2" color="grey">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</Typography>
+
+                    {
+                        productCardList.map((productItem, index) =>
+                            <ProductCard
+                                heading={productItem.heading}
+                                key={index}
+                                index={productItem.heading}
+                                body={productItem.body}
+                                performSupportAction={performSupportAction}
+                                pledgeAmount={productItem.pledgeAmount}
+                                selectable={true}
+                                selected={productItem.heading === selectedCard}
+                                quantity={productItem.quantity}
+                                disabled={productItem.disabled}
+                                btnTitle={productItem.btnTitle}
+                            />
+                        )
+                    }
                 </div>
-                <br />
-                <Typography variant="subheading2" color="grey">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</Typography>
-
-                {
-                    productCardList.map((productItem, index) =>
-                        <ProductCard
-                            heading={productItem.heading}
-                            key={index}
-                            index={productItem.heading}
-                            body={productItem.body}
-                            performSupportAction={performSupportAction}
-                            pledgeAmount={productItem.pledgeAmount}
-                            selectable={true}
-                            selected={productItem.heading === selectedCard}
-                            quantity={productItem.quantity}
-                            disabled={productItem.disabled}
-                            btnTitle={productItem.btnTitle}
-                        />
-                    )
-                }
             </Modal>
 
             <Modal

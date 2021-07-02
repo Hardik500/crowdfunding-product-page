@@ -32,6 +32,8 @@
 
 .bookmark-menu {
     cursor: pointer;
+    border-radius: 50px;
+    display: flex;
 
     @media (min-width: 1440px){
         display: flex;

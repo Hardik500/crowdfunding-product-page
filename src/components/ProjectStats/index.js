@@ -7,7 +7,7 @@ import ProgressBar from '../Helper/ProgressBar';
 export default function ProjectStats() {
     return (
         <BaseLayout>
-            <div className="project-stats-container">
+            <div className="project-stats-container" id="discover">
                 <div className="project-scores-container">
                     <StatsComponent heading="$89,914" subheading="of $100,000 backed" direction="vertical"/>
                     <div className="flex justify-center hr-container">

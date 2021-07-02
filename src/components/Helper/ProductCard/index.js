@@ -25,9 +25,9 @@ export default function ProductCard({ index, heading, pledgeAmount, performSuppo
                         </div>
                     )}
                 </div>
-                {(isDesktopOrLaptop && selectable) ? (
+                {(selectable) ? (
                     <div className="product-card-heading">
-                        <div className="flex">
+                        <div className={`flex ${isTabletOrMobile && 'flex-vertical'}`}>
                             <Typography variant="subheading1" fontWeight={700}>{heading}</Typography>
                             <div style={{ marginRight: '20px' }}></div>
                             {pledgeAmount ? (
@@ -35,19 +35,9 @@ export default function ProductCard({ index, heading, pledgeAmount, performSuppo
                             ) : null}
                         </div>
 
-                        {pledgeAmount ? <StatsComponent heading={quantity} subheading="left" style={{ justifyContent: 'flex-start' }} /> : null}
+                        {isDesktopOrLaptop && <StatsComponent heading={quantity} subheading="left" style={{ justifyContent: 'flex-start' }} />}
                     </div>
                 ) : (
-                    <div className="product-card-heading">
-                        <Typography variant="subheading1" fontWeight={700}>{heading}</Typography>
-                        <div style={{ marginRight: '20px' }}></div>
-                        {pledgeAmount ? (
-                            <Typography variant="subheading1" color="primary">Pledge ${pledgeAmount} or more</Typography>
-                        ) : null}
-                    </div>
-                )}
-
-                {(!selectable) ? (
                     <div className="product-card-heading">
 
                         <Typography variant="subheading1" fontWeight={700}>{heading}</Typography>
@@ -58,7 +48,7 @@ export default function ProductCard({ index, heading, pledgeAmount, performSuppo
                             </>
                         ) : null}
                     </div>
-                ) : null}
+                )}
             </div>
 
             <div style={{ marginLeft: (isDesktopOrLaptop && selectable) && '35px' }}>
@@ -79,12 +69,13 @@ export default function ProductCard({ index, heading, pledgeAmount, performSuppo
                 (selectable && !disabled && selected) ? (
                     <>
                         <hr />
+                        <br/>
                         <div className={`flex ${isTabletOrMobile ? 'justify-center flex-vertical' : 'align-center justify-space-between'}`}>
-                            {pledgeAmount ? <Typography variant="subheading1">Enter your pledge</Typography> : null}
+                            {pledgeAmount ? <Typography variant="subheading1" style={{textAlign: isTabletOrMobile && 'center'}}>Enter your pledge</Typography> : null}
                             <br />
-                            <div className="flex" style={{ justifyContent: 'space-between' }}>
+                            <div className="flex" style={{ justifyContent: 'space-between', maxWidth: isDesktopOrLaptop && '40%' }}>
                                 {pledgeAmount ? <Input placeholder="0" min={pledgeAmount} disabled={disabled} style={{ padding: '15px 30px' }} /> : null}
-                                <Button onClick={performSupportAction} title="Continue" disabled={disabled} style={{ padding: '15px 30px' }} />
+                                <Button onClick={performSupportAction} title="Continue" disabled={disabled} style={{ padding: '10px 30px' }} />
                             </div>
                         </div>
                     </>
